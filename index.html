@@ -2,102 +2,174 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>معرفی AMIR | ZzZstile</title>
+  <title>سفارش جم | ZzZstile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
       font-family: "Vazir", sans-serif;
-      background-color: #f0f8ff;
+      background: #f0f8ff;
       color: #333;
       text-align: center;
-      padding: 40px;
+      padding: 20px;
+      transition: background 0.3s ease;
     }
     h1 {
       color: #0077cc;
+      font-size: 28px;
     }
     .section {
-      margin: 40px auto;
-      max-width: 700px;
-      background: #ffffff;
+      background: #fff;
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      padding: 30px;
+      padding: 25px;
+      max-width: 600px;
+      margin: 30px auto;
     }
-    a {
-      color: #0077cc;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    a:hover {
-      color: #ff6600;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: #00c3ff;
-      color: white;
+    input, select {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
       border-radius: 8px;
-      text-decoration: none;
+      border: 1px solid #ccc;
       font-size: 16px;
     }
-    .highlight {
-      color: #ff0066;
+    button {
+      background-color: #00c3ff;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: background-color 0.3s ease;
+    }
+    button::after {
+      content: "🚀";
+      position: absolute;
+      right: -30px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      transition: right 0.4s ease;
+    }
+    button:hover {
+      background-color: #0099cc;
+    }
+    button:hover::after {
+      right: 10px;
+    }
+    .message {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #009900;
+    }
+    .links a {
+      display: block;
+      margin: 10px;
       font-weight: bold;
+      color: #0077cc;
+      text-decoration: none;
+    }
+    .links a:hover {
+      color: #ff6600;
+    }
+    .dark-mode {
+      background: #1a1a1a;
+      color: #eee;
+    }
+    .dark-mode .section {
+      background: #2a2a2a;
+      color: #eee;
+    }
+    .toggle-btn {
+      margin-top: 10px;
+      font-size: 14px;
+      cursor: pointer;
+      color: #0077cc;
     }
   </style>
 </head>
-<body<script>
-document.getElementById("orderForm").addEventListener("submit", function(e){
-  e.preventDefault();
-  const formData = {
-    name: e.target.name.value,
-    email: e.target.email.value,
-    order: e.target.order.value
-  };
-  fetch("https://script.google.com/macros/s/AKfycbzGVQPhlIhTKUwxlhUUzcKKWWgYomzqCwTc9C181BlsgF4VQJUXlyuHxXDApjdDImEO/exec", {
-    method: "POST",
-    body: JSON.stringify(formData),
-    headers: {"Content-Type": "application/json"}
-  }).then(res => res.text())
-    .then(data => alert("✅ سفارش شما با موفقیت ثبت شد!"))
-    .catch(err => alert("❌ خطا در ثبت سفارش"));
-});
-</script>>
+<body>
 
-  <h1>🎮 خوش‌اومدی به دنیای ZzZstile</h1>
+  <h1>🎮 سفارش جم Free Fire با ZzZstile</h1>
+  <div class="toggle-btn" onclick="toggleDarkMode()">🌓 تغییر حالت شب</div>
 
   <div class="section">
-    <h2>من کی هستم؟</h2>
-    <p>سلام! من <span class="highlight">AMIR</span> هستم، سازنده محتوا، گیمر و مدیر برند ZzZstile. سال‌هاست که توی فضای گیمینگ فعالیت می‌کنم و با ویدیوهای فان، آموزشی و نقد بازی‌ها توی <a href="https://www.aparat.com/ZzZ0stile" target="_blank">آپارات</a> و <a href="https://rubika.ir/ZzZstile" target="_blank">روبیکا</a> مخاطب‌های زیادی رو سرگرم کردم.</p>
-    <p>توی کانال‌هام می‌تونی ویدیوهایی ببینی از ساخت ماشین داخل ماین‌کرافت، معرفی برنامه‌های کاربردی، و حتی آموزش ساخت وسایل هوشمند داخل بازی!</p>
-    <a class="btn" href="https://www.aparat.com/ZzZ0stile" target="_blank">🎥 مشاهده کانال آپارات</a>
-    <a class="btn" href="https://rubika.ir/ZzZstile" target="_blank">📱 ورود به روبیکا</a>
+    <h2>درباره من</h2>
+    <p>سلام! من AMIR هستم، بنیان‌گذار برند ZzZstile. ما اینجا هستیم تا خرید جم رو برای گیمرهای فارسی‌زبان امن، سریع و سرگرم‌کننده کنیم. با ویدیوهای فان، آموزش‌های گیمینگ و پشتیبانی واقعی، هدفمون ساختن یه فضای قابل اعتماد برای همه‌ست.</p>
   </div>
 
   <div class="section">
-    <h2>چرا به من اعتماد کنید برای خرید جم؟</h2>
-    <p>✅ من سال‌هاست توی فضای گیمینگ فعالیت دارم و همیشه با مخاطب‌هام صادق بودم.</p>
-    <p>✅ تمام خریدها با رسید معتبر و پشتیبانی کامل انجام می‌شن.</p>
-    <p>✅ توی روبیکا و آپارات می‌تونی نظرات و رضایت کاربران رو ببینی.</p>
-    <p>✅ پشتیبانی مستقیم از طریق روبیکا: <a href="rubika://l.rubika.ir/ZzZ0stile">@ZzZ0stile</a></p>
-    <p>✅ قیمت‌ها منصفانه‌ست و همیشه تخفیف‌های ویژه داریم برای اعضای کانال‌ها.</p>
-    <a class="btn" href="https://rubika.ir/ZzZstile" target="_blank">📦 خرید امن از روبیکا</a>
+    <h2>📦 فرم سفارش جم</h2>
+    <form action="https://formspree.io/f/meolpone" method="POST" onsubmit="return handleSubmit(event)">
+      <input type="text" name="name" id="name" placeholder="نام شما" required>
+      <input type="text" name="playerId" id="playerId" placeholder="آیدی بازی" required>
+      <select name="gemAmount" id="gemAmount" required>
+        <option value="">انتخاب تعداد جم</option>
+        <option value="100">100 جم</option>
+        <option value="310">310 جم</option>
+        <option value="520">520 جم</option>
+        <option value="1060">1060 جم</option>
+      </select>
+      <input type="text" name="contact" id="contact" placeholder="شماره یا ایمیل برای پیگیری" required>
+      <input type="text" name="discountCode" id="discountCode" placeholder="کد تخفیف (اختیاری)">
+      <button type="submit">📦 ارسال سفارش</button>
+    </form>
+    <div class="message" id="confirmationMsg"></div>
   </div>
 
   <div class="section">
-    <h2>ویدیوهای منتخب من</h2>
+    <h2>📱 سفارش از طریق واتساپ</h2>
+    <form action="https://formspree.io/f/meolpone" method="POST">
+      <input type="text" name="whatsappName" placeholder="نام شما در واتساپ" required>
+      <input type="text" name="whatsappMessage" placeholder="متن سفارش یا سوال شما" required>
+      <input type="hidden" name="platform" value="WhatsApp">
+      <button type="submit">ارسال از طریق واتساپ</button>
+    </form>
+    <p>شماره واتساپ ما: <strong>09923923398</strong></p>
+  </div>
+
+  <div class="section">
+    <h2>📜 قوانین و مقررات</h2>
     <ul style="text-align: right; direction: rtl;">
-      <li><a href="https://www.aparat.com/v/eue3g3w" target="_blank">🎮 معرفی برنامه‌ای که سنس مخصوص موبایلت رو بهت بده</a></li>
-      <li><a href="https://www.aparat.com/v/wculqo3" target="_blank">🔥 ساخت اجاق گاز هوشمند</a></li>
-      <li><a href="https://www.aparat.com/v/ugi8ig4" target="_blank">🚗 ساخت ماشین داخل ماین‌کرافت!!!</a></li>
+      <li>تمام سفارش‌ها پس از پرداخت نهایی پردازش می‌شوند.</li>
+      <li>اطلاعات شما فقط برای پیگیری سفارش استفاده می‌شود و محرمانه باقی می‌ماند.</li>
+      <li>در صورت وارد کردن آیدی اشتباه، مسئولیت با مشتری است.</li>
+      <li>زمان تحویل جم بین ۵ تا ۳۰ دقیقه است (در ساعات کاری).</li>
+      <li>استفاده از کد تخفیف فقط در فرم سفارش امکان‌پذیر است.</li>
     </ul>
   </div>
 
-  <div class="section">
-    <h2>ممنون از حمایتتون ❤️</h2>
-    <p>اگه دنبال محتوای خلاقانه، خرید امن، و یه فضای دوستانه هستی، جای درستی اومدی. ممنون که عضو خانواده ZzZstile هستی!</p>
-    <p>برای ارتباط بیشتر، حتما عضو کانال‌های من در روبیکا و آپارات شو.</p>
+  <div class="section links">
+    <h2>📣 برای اعتماد بیشتر:</h2>
+    <a href="https://rubika.ir/ZzZstile" target="_blank">📱 کانال روبیکا ZzZstile</a>
+    <a href="https://www.aparat.com/ZzZ0stile" target="_blank">🎥 کانال آپارات ZzZ0stile</a>
+    <a href="https://t.me/+adoyob5NDD01ZDFk" target="_blank">📣 کانال تلگرام ZzZstile</a>
   </div>
+
+  <script>
+    function handleSubmit(e) {
+      const discountCode = document.getElementById("discountCode").value.trim();
+      let discountMessage = "";
+
+      if (discountCode === "meolpone") {
+        discountMessage = "🎉 کد تخفیف meolpone فعال شد! ۵ هزار تومان از مبلغ سفارش شما کم شد.";
+      } else if (discountCode) {
+        discountMessage = "⚠️ کد تخفیف وارد شده معتبر نیست، سفارش بدون تخفیف ثبت شد.";
+      }
+
+      document.getElementById("confirmationMsg").innerText =
+        `✅ سفارش شما ثبت شد! ${discountMessage}`;
+
+      return true;
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 
 </body>
 </html>
