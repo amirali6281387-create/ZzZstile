@@ -86,9 +86,26 @@
   <label>🎁 کد تخفیف:</label><br>
   <input type="text" name="discount_code" placeholder="مثلاً: ZzZfire2025"><br><br>
 
-  <button type="submit">✅ ارسال سفارش</button>
+  <button type="submit" style="
+  animation: pulse 1s infinite;
+  background-color: #ff9800;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-family: 'Comic Sans MS', cursive;
+  cursor: pointer;">
+  🚀 ارسال سفارش
+  </button>
   </form>
-
+<style>
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+</style>
 <script>
   function checkCode() {
     const code = document.getElementById("giftCode").value.trim();
