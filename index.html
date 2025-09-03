@@ -46,7 +46,23 @@
     }
   </style>
 </head>
-<body>
+<body<script>
+document.getElementById("orderForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  const formData = {
+    name: e.target.name.value,
+    email: e.target.email.value,
+    order: e.target.order.value
+  };
+  fetch("https://script.google.com/macros/s/AKfycbzGVQPhlIhTKUwxlhUUzcKKWWgYomzqCwTc9C181BlsgF4VQJUXlyuHxXDApjdDImEO/exec", {
+    method: "POST",
+    body: JSON.stringify(formData),
+    headers: {"Content-Type": "application/json"}
+  }).then(res => res.text())
+    .then(data => alert("✅ سفارش شما با موفقیت ثبت شد!"))
+    .catch(err => alert("❌ خطا در ثبت سفارش"));
+});
+</script>>
 
   <h1>🎮 خوش‌اومدی به دنیای ZzZstile</h1>
 
